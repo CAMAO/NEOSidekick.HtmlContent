@@ -2,21 +2,14 @@
 # Restrict creation and editing of `NEOSidekick.HtmlContent:Content.Html` to admins
 ##
 privilegeTargets:
-  'Neos\ContentRepository\Security\Authorization\Privilege\Node\CreateNodePrivilege':
+  'Neos\Neos\Security\Authorization\Privilege\EditNodePrivilege':
     'NEOSidekick.HtmlContent:Create':
-      label: 'Create a new html node'
-      matcher: 'createdNodeIsOfType("NEOSidekick.HtmlContent:Content.Html")'
-  'Neos\ContentRepository\Security\Authorization\Privilege\Node\EditNodePrivilege':
+      matcher: 'nodeIsOfType("NEOSidekick.HtmlContent:Content.Html")'
     'NEOSidekick.HtmlContent:Edit':
-      label: 'Edit a html node'
       matcher: 'nodeIsOfType("NEOSidekick.HtmlContent:Content.Html")'
-  'Neos\ContentRepository\Security\Authorization\Privilege\Node\RemoveNodePrivilege':
     'NEOSidekick.HtmlContent:Remove':
-      label: 'Remove a html node'
       matcher: 'nodeIsOfType("NEOSidekick.HtmlContent:Content.Html")'
-  'Neos\ContentRepository\Security\Authorization\Privilege\Node\EditNodePropertyPrivilege':
     'NEOSidekick.HtmlContent:EditProperty':
-      label: 'Edit a html node property'
       matcher: 'nodeIsOfType("NEOSidekick.HtmlContent:Content.Html")'
 
 roles:
